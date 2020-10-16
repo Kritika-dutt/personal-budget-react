@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+
+import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,9 +14,7 @@ import HomePage from './HomePage/Homepage'
 import Footer from './Footer/Footer';
 import AboutPage from './About/AboutPage';
 import LoginPage from './LoginPage/LoginPage';
-
-
-
+import BarChart from './BarChart/BarChart.js';
 
 function App() {
   return (
@@ -23,6 +22,7 @@ function App() {
     <Menu/>
     <Hero/>
     <div className="mainContainer">
+   
 <Switch>
 <Route path="/about">
   <AboutPage></AboutPage>
@@ -34,6 +34,7 @@ function App() {
   <HomePage></HomePage>
 </Route>
 </Switch>
+<BarChart size={[200,200]} />
 
     </div>
     <Footer/>
